@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdisatar Yusuf | Front-End Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="#">
+</head>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">Abdisatar<span>Yusuf</span></a>
+            
+            <!-- Hamburger Menu -->
+            <button class="hamburger" id="hamburger">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="auth-btn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Authentication Modal -->
+    <div class="auth-modal" id="auth-modal">
+        <div class="auth-container">
+            <button class="close-btn" id="close-auth-modal">&times;</button>
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Login</button>
+                <button class="auth-tab" data-tab="register">Register</button>
+            </div>
+            <form id="login-form" class="auth-form active">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="auth-btn">Login</button>
+                <div class="social-auth">
+                    <button type="button" class="social-btn google">
+                        <i class="fab fa-google"></i>
+                        Login with Google
+                    </button>
+                    <button type="button" class="social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Login with Facebook
+                    </button>
+                    <button type="button" class="social-btn github">
+                        <i class="fab fa-github"></i>
+                        Login with GitHub
+                    </button>
+                </div>
+            </form>
+            <form id="register-form" class="auth-form">
+                <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" required>
+                </div>
+                <button type="submit" class="auth-btn">Register</button>
+                <div class="social-auth">
+                    <button type="button" class="social-btn google">
+                        <i class="fab fa-google"></i>
+                        Register with Google
+                    </button>
+                    <button type="button" class="social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Register with Facebook
+                    </button>
+                    <button type="button" class="social-btn github">
+                        <i class="fab fa-github"></i>
+                        Register with GitHub
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- CV Download Modal -->
+    <div class="cv-modal" id="cv-modal">
+        <div class="cv-container">
+            <button class="close-btn" id="close-cv-modal">&times;</button>
+            <h3>Download CV</h3>
+            <p>Select your preferred format:</p>
+            <div class="cv-options">
+                <button class="cv-format-btn" data-format="pdf">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>PDF Format</span>
+                    <small>Recommended</small>
+                </button>
+                <button class="cv-format-btn" data-format="docx">
+                    <i class="fas fa-file-word"></i>
+                    <span>Word Document</span>
+                    <small>Editable</small>
+                </button>
+                <button class="cv-format-btn" data-format="txt">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Text File</span>
+                    <small>Simple</small>
+                </button>
+            </div>
+            <div class="cv-preview">
+                <h4>Preview:</h4>
+                <div class="preview-content">
+                    <h5>Abdisatar Yusuf</h5>
+                    <p>Front-End Developer & UI/UX Designer</p>
+                    <p>Email: satexza12@gmail.com</p>
+                    <p>Phone: +251-912110338</p>
+                    <hr>
+                    <p><strong>Experience:</strong> 1+ years in front-end development</p>
+                    <p><strong>Skills:</strong> HTML, CSS, JavaScript, Reactjs, UI/UX Design</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="fade-in">Hi, I'm <span class="highlight">Abdisatar Yusuf</span></h1>
+                <h2 class="fade-in delay-1">Front-End Developer & UI/UX Designer</h2>
+                <p class="fade-in delay-2">I create beautiful, responsive web experiences with clean code and modern technologies. Passionate about user experience and interface design.</p>
+                <div class="cta-buttons fade-in delay-3">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <button id="download-cv-btn" class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download CV
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image fade-in delay-2">
+                <div class="profile-img-container">
+                    <img src="image/Profile image2026.jpeg" alt="Abdisatar Yusuf" class="profile-img">
+                    <div class="img-border"></div>
+                    <div class="status-indicator"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text slide-in-left">
+                    <p>Hello! I'm <strong>Abdisatar Yusuf</strong>, a passionate front-end developer with 1+ years of experience creating digital experiences. I specialize in HTML, CSS, JavaScript, and modern frameworks like React and Vue.js.</p>
+                    <p>My approach combines technical expertise with a keen eye for design, resulting in websites that are both functional and visually appealing. I believe in writing clean, maintainable code and staying up-to-date with industry trends.</p>
+                    <p>When I'm not coding, you can find me exploring new design trends, contributing to open-source projects, or sharing knowledge through tech blogs and workshops.</p>
+                </div>
+                <div class="skills slide-in-right">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-category">
+                        <h4>Frontend</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">SASS</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools & Others</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Responsive Design</span>
+                            <span class="skill-tag">UI/UX Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="cards-container">
+                <div class="card fade-up">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="card-title">
+                            <h3>WFP - IT Assistant</h3>
+                            <p class="card-subtitle">Samaritan's Purse</p>
+                        </div>
+                    </div>
+                    <div class="card-date">December, 2023 - May, 2024</div>
+                    <p class="card-description">Leading Information Technology Team and optimizing application performance.</p>
+                    <div class="card-tech">
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Redux</span>
+                        <span>GraphQL</span>
+                    </div>
+                </div>
+                <div class="card fade-up delay-1">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="card-title">
+                            <h3>IT Officer</h3>
+                            <p class="card-subtitle">RDV - Relief Development for Vulnerable</p>
+                        </div>
+                    </div>
+                    <div class="card-date">November, 2024 - November, 2025</div>
+                    <p class="card-description">Developed interactive websites and web applications for various clients across different Locations.</p>
+                    <div class="card-tech">
+                        <span>Vue.js</span>
+                        <span>JavaScript</span>
+                        <span>SCSS</span>
+                        <span>REST API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="cards-container">
+                <div class="card fade-up">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="card-title">
+                            <h3>Information Technology</h3>
+                            <p class="card-subtitle">Degahbur Polytechnic and Science College</p>
+                        </div>
+                    </div>
+                    <div class="card-date">2020 - 2023</div>
+                    <p class="card-description">Specialized in Human-Computer Interaction and Web Technologies. Graduated with distinction. Thesis on "Optimizing User Experience in Progressive Web Apps".</p>
+                    <div class="card-tech">
+                        <span>Web Technologies</span>
+                        <span>Database</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info slide-in-left">
+                    <h3>Let's Work Together</h3>
+                    <p>Feel free to reach out for collaborations or just a friendly hello</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>satexza12@gmail.com.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+251-912110338</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Jigjiga, Ethiopia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-contact">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-codepen"></i></a>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form slide-in-right">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="#home" class="footer-logo">Abdisatar<span>Yusuf</span></a>
+                <p class="footer-text">Front-End Developer & UI/UX Designer</p>
+                <div class="social-links">
+                    <a href="https://github.com/abdisataryusuf10" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/abdisatar-yusuf-685460327?" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-codepen"></i></a>
+                </div>
+                <p class="copyright">&copy; 2025 Abdisatar Yusuf. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
