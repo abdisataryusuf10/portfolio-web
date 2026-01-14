@@ -1110,3 +1110,20 @@ footer {
         width: 100%;
     }
 }
+
+
+.fab.fa-github.fa-2x{
+    color: var(--text-color);
+}
+
+.fab.fa-linkedin.fa-2x{
+    color: hsl(240, 67%, 56%);
+}
+
+.fab.fa-twitter.fa-2x{
+    color: hsl(203, 89%, 53%);
+}
+
+.fab.fa-instagram.fa-2x{
+    color: hsl(329, 70%, 58%);
+}
